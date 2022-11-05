@@ -72,15 +72,19 @@ E.g. When you create an object in Python it is represented like this:
 ```python
 from django.db import models
 class Car(models.Model):
-    nake = models.CharField(max_length=25)
+    nake = models.CharField(max_length=100)
 
 if __name__ == '__main__':
     car = Car(make="Model 3")
     print(car)
 ```
-but to store it into a file we may need the JSON representation:
-```python
 
+but to store it into a file we may need the JSON representation:
+
+```python
+{
+    "make": "Model 3"
+}
 ```
 
 What serializers basically do is permit the transformation of Models into their JSON shape. Why do we need JSON data? Because it 

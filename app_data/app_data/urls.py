@@ -39,6 +39,7 @@ from users.models import AppUser
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('users/', include('users.urls')),
+    path('books/', include('books.urls')),
     path('api-auth/', include('rest_framework.urls'))
 
 ]
